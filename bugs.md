@@ -10,7 +10,7 @@ Legend: `[ ]` = open · `[x]` = fixed
 
 | # | Status | Description | File | Line |
 |---|--------|-------------|------|------|
-| 1 | [ ] | `SearchParams` interface not exported — breaks `tsc` on frontend (`routeTree.gen.ts` TS4023) | `apps/web/src/routes/index.tsx` | 9 |
+| 1 | [x] | `SearchParams` interface not exported — breaks `tsc` on frontend (`routeTree.gen.ts` TS4023) | `apps/web/src/routes/index.tsx` | 9 |
 
 ---
 
@@ -61,4 +61,4 @@ Legend: `[ ]` = open · `[x]` = fixed
 ## Stats
 - Total bugs: 17
 - P0: 1 · P1: 6 · P2: 5 · P3: 3 · P4: 2
-- Fixed: 1 / 17
+- Fixed: 2 / 17
