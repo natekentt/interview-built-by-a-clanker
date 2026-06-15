@@ -43,9 +43,9 @@ Legend: `[ ]` = open · `[x]` = fixed
 
 | # | Status | Description | File | Line |
 |---|--------|-------------|------|------|
-| 13 | [ ] | `minPrice` filter uses `<=` instead of `>=` — returns cheap items when expensive ones are requested; display/filter only, no DB impact | `apps/api/src/db.ts` | 365 |
-| 14 | [ ] | React Query cache not cleared on logout — next user to log in on same tab briefly sees prior user's `cart` and `favorites` data | `apps/web/src/lib/auth.tsx` + `apps/web/src/routes/__root.tsx` | 55–58 / 84–87 |
-| 15 | [ ] | `q=` search does not include `specialty` field — `?q=security` misses Compliance Carl; display/filter only, no DB impact | `apps/api/src/db.ts` | 345–354 |
+| 13 | [x] | `minPrice` filter uses `<=` instead of `>=` — returns cheap items when expensive ones are requested; display/filter only, no DB impact | `apps/api/src/db.ts` | 365 |
+| 14 | [x] | React Query cache not cleared on logout — next user to log in on same tab briefly sees prior user's `cart` and `favorites` data | `apps/web/src/lib/auth.tsx` + `apps/web/src/routes/__root.tsx` | 55–58 / 84–87 |
+| 15 | [x] | `q=` search does not include `specialty` field — `?q=security` misses Compliance Carl; display/filter only, no DB impact | `apps/api/src/db.ts` | 345–354 |
 
 ---
 
@@ -61,4 +61,4 @@ Legend: `[ ]` = open · `[x]` = fixed
 ## Stats
 - Total bugs: 17
 - P0: 1 · P1: 6 · P2: 5 · P3: 3 · P4: 2
-- Fixed: 12 / 17
+- Fixed: 15 / 17
