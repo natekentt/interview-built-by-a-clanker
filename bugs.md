@@ -33,7 +33,7 @@ Legend: `[ ]` = open · `[x]` = fixed
 |---|--------|-------------|------|------|
 | 8 | [x] | Two queries share key `["favorites"]` but return different shapes (`string[]` vs `{ favorites: Persona[] }`) — cache collision causes `isFavorited` to always be `false` depending on page visit order | `apps/web/src/routes/personas/$personaId.tsx` line 22 vs `apps/web/src/routes/favorites.tsx` line 16 | — |
 | 9 | [x] | `logout()` does not remove token from localStorage — on page refresh after logout, old token is re-read and user is silently re-authenticated | `apps/web/src/lib/auth.tsx` | 55–58 |
-| 10 | [ ] | React Query key `["personas"]` is static — changing any filter/search param does NOT trigger a refetch; all filtering appears broken to the user | `apps/web/src/routes/index.tsx` | 43 |
+| 10 | [x] | React Query key `["personas"]` is static — changing any filter/search param does NOT trigger a refetch; all filtering appears broken to the user | `apps/web/src/routes/index.tsx` | 43 |
 | 11 | [ ] | CartItem decrement button has no `disabled` prop at `quantity === 1` — sends `quantity: 0` to API which rejects with 400; button appears clickable but errors silently | `apps/web/src/components/CartItem.tsx` | 41 |
 | 12 | [ ] | Cart count in navbar uses `queryKey: ["cart-count"]` but cart mutations invalidate `["cart"]` — nav badge is perpetually stale after any cart change | `apps/web/src/routes/__root.tsx` | 16 |
 
@@ -61,4 +61,4 @@ Legend: `[ ]` = open · `[x]` = fixed
 ## Stats
 - Total bugs: 17
 - P0: 1 · P1: 6 · P2: 5 · P3: 3 · P4: 2
-- Fixed: 9 / 17
+- Fixed: 10 / 17
