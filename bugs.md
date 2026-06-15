@@ -18,7 +18,7 @@ Legend: `[ ]` = open · `[x]` = fixed
 
 | # | Status | Description | File | Line |
 |---|--------|-------------|------|------|
-| 2 | [ ] | Auth middleware is a no-op by default (`ENFORCE_AUTH` env not set) — skips JWT verification, `request.user` is `undefined`, crashes ALL protected routes with 500 instead of 401 | `apps/api/src/middleware/auth.ts` | 3–11 |
+| 2 | [x] | Auth middleware is a no-op by default (`ENFORCE_AUTH` env not set) — skips JWT verification, `request.user` is `undefined`, crashes ALL protected routes with 500 instead of 401 | `apps/api/src/middleware/auth.ts` | 3–11 |
 | 3 | [ ] | Login response omits `username` — register works, login broken; users get an incomplete session, navbar shows `undefined` after login | `apps/api/src/routes/auth.ts` | 62–65 |
 | 4 | [ ] | Checkout does not clear cart after order placed — `db.cart.clearForUser()` exists but is never called; users can re-checkout the same items, leading to duplicate orders | `apps/api/src/routes/checkout.ts` | 50–52 |
 | 5 | [ ] | Favorite toggle logic inverted — calls `DELETE` when NOT favorited, `POST` when already favorited; actively corrupts favorites in the DB | `apps/web/src/routes/personas/$personaId.tsx` | 42–44 |
@@ -61,4 +61,4 @@ Legend: `[ ]` = open · `[x]` = fixed
 ## Stats
 - Total bugs: 17
 - P0: 1 · P1: 6 · P2: 5 · P3: 3 · P4: 2
-- Fixed: 0 / 17
+- Fixed: 1 / 17
