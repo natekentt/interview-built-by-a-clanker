@@ -20,7 +20,7 @@ function PersonaDetailPage() {
   });
 
   const { data: favorites = [] } = useQuery({
-    queryKey: ["favorites"],
+    queryKey: ["favorites", "ids"],
     queryFn: async () => {
       const res = await api.get<{ favorites: Persona[] }>("/favorites");
       return res.favorites.map((p) => p.id);
